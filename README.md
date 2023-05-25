@@ -210,6 +210,6 @@ Thanks to the Microverse team for this project.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Jeddaa/covidata/LICENSE) licensed.
+This project is [MIT](https://github.com/Jeddaa/covidata/blob/develop/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
