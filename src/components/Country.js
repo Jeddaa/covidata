@@ -5,17 +5,16 @@ import { Link } from 'react-router-dom';
 const Country = ({ Country, to, total }) => {
   const [imageSrc, setImageSrc] = useState(null);
 
-  const loadImage = async () => {
-    try {
-      const imageModule = await import(`../images/${Country}.png`);
-      setImageSrc(imageModule.default);
-    } catch (error) {
-      const imageModule = await import('../images/default.png');
-      setImageSrc(imageModule.default);
-    }
-  };
-
   useEffect(() => {
+    const loadImage = async () => {
+      try {
+        const imageModule = await import(`../images/${Country}.png`);
+        setImageSrc(imageModule.default);
+      } catch (error) {
+        const imageModule = await import('../images/default.png');
+        setImageSrc(imageModule.default);
+      }
+    };
     loadImage();
   }, [Country]);
 

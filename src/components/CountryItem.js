@@ -11,17 +11,16 @@ const CountryItem = () => {
 
   const [imageSrc, setImageSrc] = useState(null);
 
-  const loadImage = async () => {
-    try {
-      const imageModule = await import(`../images/${country}.png`);
-      setImageSrc(imageModule.default);
-    } catch (error) {
-      const imageModule = await import('../images/default.png');
-      setImageSrc(imageModule.default);
-    }
-  };
-
   useEffect(() => {
+    const loadImage = async () => {
+      try {
+        const imageModule = await import(`../images/${country}.png`);
+        setImageSrc(imageModule.default);
+      } catch (error) {
+        const imageModule = await import('../images/default.png');
+        setImageSrc(imageModule.default);
+      }
+    };
     loadImage();
   }, [country]);
 
