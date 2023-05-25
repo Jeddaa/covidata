@@ -16,23 +16,23 @@ const CountryList = () => {
     <div className="mx-auto my-0">
       {isError && <p className="m-3">{isError}</p>}
       {isLoading ? (
-        <h2 className="m-3 text-2xl">Loading...</h2>
+        <h2 className="m-3 text-white text-2xl">Loading...</h2>
       ) : (
         <div className="p-2">
           {globalData && (
-            <div className="w-full flex my-0 mx-auto">
+            <div className="w-full flex gap-1 my-0 mx-auto">
               <div className="w-1/2">
                 <img src={Worldmap} alt="World map" />
               </div>
               <div className="w-1/2 flex flex-col justify-center">
-                <h2 data-testid="header-1" className="m-0 p-0 text-2xl font-bold">Global Confirmed Cases</h2>
-                <p className="m-0 p-0">{globalData.confirmed}</p>
+                <h2 className="p-0 text-white text-base sm:text-2xl leading-none lg:text-4xl font-bold">Global Confirmed Cases</h2>
+                <p className="m-0 text-white p-0">{globalData.confirmed}</p>
               </div>
             </div>
           )}
           {covidData && (
             <div>
-              <h2 className="my-2 text-2xl font-bold">STATS BY COUNTRY</h2>
+              <h2 className="my-2 pt-2 text-xl lg:text-2xl font-bold text-white">STATS BY COUNTRY</h2>
               <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {covidData.map((country) => {
                   const filtered = rawData.filter((item) => item.Country_Region === country);
