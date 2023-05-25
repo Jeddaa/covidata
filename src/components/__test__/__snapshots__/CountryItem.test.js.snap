@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders the home page correctly 1`] = `
+<div
+  className="flex flex-col mb-4 bg-neutral-400"
+>
+  <h2
+    className="text-black text-xl font-bold mb-2 px-2 pt-2"
+  >
+    :
+     0 Cases
+  </h2>
+  <div
+    className=""
+  />
+</div>
+`;
